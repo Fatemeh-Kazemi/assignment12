@@ -1,0 +1,123 @@
+:root{
+    --bgColor1: #191811;
+    --bgColor2: #F94E00;
+    --Color: #f8f8f8;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(rubic-font/Rubik-VariableFont_wght.ttf);
+}
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.form{
+    width: 264px;
+    height: 384px;
+    background: var(--bgColor1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    border-radius: 20px;
+    box-shadow: -10px 10px 20px rgba(10, 10, 7, 0.2), 10px -10px 20px rgba(10, 10, 7, 0.2), -10px 10px 20px rgba(40, 38, 27, 0.9),
+    10px 10px 25px rgba(40, 38, 27, 0.9) inset 1px 1px 2px rgba(40, 38, 27, 0.3), inset -1px -1px 2px rgba(10, 10, 7, 0.5);
+}
+.grid-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 6px;
+    gap: 6px 6px;
+    grid-template-areas: 
+    "display display display display"
+    "display display display display"
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . equate"
+    ". . . equate";
+}
+.display{
+    grid-area: display;
+}
+.equate{
+    grid-area: equate;
+}
+.display, .btn, .equate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner-display{
+    width: 236px;
+    height: 60px;
+    background: var(--bgColor1);
+    box-shadow: 1px 1px 2px rgba(40, 38, 27, 0.3), -1px -1px 2px rgba(10, 10, 7, 0.5), inset -5px 5px 10px rgba(10, 10, 7, 0.2),
+    inset 5px -5px 10px rgba(10, 10, 7, 0.2) inset -5px -5px 10px rgba(40, 38, 27, 0.9), inset 5px 5px 13px rgba(10, 10, 7, 0.9);
+    border-radius: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.inner-text{
+    text-align: right;
+    background: var(--bgColor1);
+    height: 100px;
+    font-family: 'Rubik';
+    font-size: 24px;
+    margin: 20px 10px 10px 10px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--Color);
+    border-width: 0px;
+    border: none;
+}
+.inner-text:focus{
+    border-width: 0px;
+    border: none;
+    outline: none;
+}
+.inner-button{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bgColor1);
+    box-shadow: -5px 5px 10px rgba(10, 10, 7, 0.2), 5px -5px 10px rgba(10, 10, 7, 0.2), -5px 5px 10px rgba(40, 38, 27, 0.9),
+    5px 5px 13px rgba(10, 10, 7, 0.9) inset 1px 1px 2px rgba(40, 38, 27, 0.3), inset -1px -1px 2px rgba(10, 10, 7, 0.5);
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #f8f8f8;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.inner-button:active{
+    box-shadow: 1px 1px 2px rgba(40, 38, 27, 0.3), -1px -1px 2px rgba(10, 10, 7, 0.5), inset -5px 5px 10px rgba(10, 10, 7, 0.2),
+    inset 5px -5px 10px rgba(10, 10, 7, 0.2) inset -5px -5px 10px rgba(40, 38, 27, 0.9), inset 5px 5px 13px rgba(10, 10, 7, 0.9);
+    transition: box-shadow 0.3s ease-in-out;
+    font-size: 14px;
+}
+.equate .inner-button{
+    height: 100px;
+    background: var(--bgColor2);
+    color: var(--bgColor1);
+}
+.equate .inner-button:active{
+    box-shadow: 1px 1px 2px rgba(40, 38, 27, 0.3), -1px -1px 2px rgba(10, 10, 7, 0.5), inset -5px 5px 10px rgba(10, 10, 7, 0.2),
+    inset 5px -5px 10px rgba(10, 10, 7, 0.2) inset -5px -5px 10px rgba(40, 38, 27, 0.9), inset 5px 5px 13px rgba(10, 10, 7, 0.9);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.yellow{
+    color: var(--bgColor2);
+}
